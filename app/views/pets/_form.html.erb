@@ -1,0 +1,8 @@
+<div class="container">
+  <%= simple_form_for @pet do |f| %>
+    <%= f.input :name %>
+    <%= f.input :category, collection: Pet::CATEGORY %>
+    <%= f.input :found_on, as: :string, input_html: { 'data-provide' => 'datepicker' } %>
+    <%= f.submit %>
+  <% end %>
+</div>

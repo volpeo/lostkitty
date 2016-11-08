@@ -1,0 +1,7 @@
+<h1><%= @pet.name %></h1>
+<p><%= @pet.category %></p>
+<p><%= @pet.found_on %></p>
+<%= link_to "Edit my pet", edit_pet_path(@pet) %>
+<%= link_to "This pet returned to its family", pet_path(@pet), method: :delete %>
+
+<%= link_to "Return to pet list", pets_path %>

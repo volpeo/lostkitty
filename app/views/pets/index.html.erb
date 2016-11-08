@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Lost pets</h1>
+  <div class="row">
+    <% @pets.each do |pet| %>
+      <div class="col-sm-4">
+        <h2><%= link_to pet.name, pet_path(pet) %></h2>
+        <p><%= pet.category %></p>
+        <p><%= pet.found_on %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "I've found a pet", new_pet_path, class: "btn btn-primary" %>
+</div>
